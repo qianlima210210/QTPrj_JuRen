@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/images/beijing.png</file>
+        <file>images/images/boardNode.png</file>
+        <file>images/images/chooseCoin.png</file>
+        <file>images/images/coin.png</file>
+        <file>images/images/coin01.png</file>
+        <file>images/images/coin02.png</file>
+        <file>images/images/coin03.png</file>
+        <file>images/images/coin04.png</file>
+        <file>images/images/coin05.png</file>
+        <file>images/images/coin06.png</file>
+        <file>images/images/coin07.png</file>
+        <file>images/images/coin08.png</file>
+        <file>images/images/coin09.png</file>
+        <file>images/images/gamewin.png</file>
+        <file>images/images/log.png</file>
+        <file>images/images/returnAfterStyle.png</file>
+        <file>images/images/returnBeforeStyle.png</file>
+        <file>images/images/start.png</file>
+        <file>images/images/4899.wav</file>
+        <file>images/images/10910.wav</file>
+    </qresource>
+</RCC>

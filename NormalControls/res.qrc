@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>iamges/family_illustration-01.png</file>
+        <file>iamges/logo.contrast-white_scale-180.png</file>
+        <file>iamges/Logo.scale-100.png</file>
+        <file>iamges/PasswordExpiry.contrast-white_scale-150.png</file>
+        <file>iamges/SecurityAndMaintenance_Error.png</file>
+        <file>iamges/Snooze_80.contrast-white.png</file>
+    </qresource>
+</RCC>
