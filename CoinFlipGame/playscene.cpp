@@ -8,7 +8,7 @@
 #include <QPixmap>
 #include <QLabel>
 #include <QFont>
-#include <QSound>
+#include <QSound>//multimedia
 #include <QDebug>
 
 PlayScene::PlayScene(QWidget *parent) :
