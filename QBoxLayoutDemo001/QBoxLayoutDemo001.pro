@@ -25,9 +25,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         widget.cpp \
-    mywidget.cpp
+    mywidget.cpp \
+    form.cpp \
+    gridlayout.cpp \
+    formlayout.cpp
 
 HEADERS  += widget.h \
-    mywidget.h
+    mywidget.h \
+    form.h \
+    gridlayout.h \
+    formlayout.h
 
-FORMS    += widget.ui
+FORMS    += widget.ui \
+    form.ui \
+    gridlayout.ui \
+    formlayout.ui
