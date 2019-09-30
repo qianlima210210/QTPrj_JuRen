@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-09-25T21:20:31
+# Project created by QtCreator 2019-09-30T09:12:06
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QBoxLayoutDemo001
+TARGET = InstallWizard
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,22 +24,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        widget.cpp \
-    mywidget.cpp \
-    form.cpp \
-    gridlayout.cpp \
-    formlayout.cpp \
-    stackedlayout.cpp
+        widget.cpp
 
-HEADERS  += widget.h \
-    mywidget.h \
-    form.h \
-    gridlayout.h \
-    formlayout.h \
-    stackedlayout.h
+HEADERS  += widget.h
 
-FORMS    += widget.ui \
-    form.ui \
-    gridlayout.ui \
-    formlayout.ui \
-    stackedlayout.ui
+FORMS    += widget.ui

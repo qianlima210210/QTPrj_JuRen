@@ -26,8 +26,7 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(435, 250);
-        Widget->setStyleSheet(QStringLiteral("background-color: rgb(85, 255, 255);"));
+        Widget->resize(400, 300);
 
         retranslateUi(Widget);
 
@@ -36,7 +35,7 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
+        Widget->setWindowTitle(QApplication::translate("Widget", "\345\256\211\350\243\205\345\220\221\345\257\274", Q_NULLPTR));
     } // retranslateUi
 
 };

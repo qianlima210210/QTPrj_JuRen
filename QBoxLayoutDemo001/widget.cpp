@@ -11,17 +11,17 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
 //    //添加垂直布局
-//    QVBoxLayout *layout = new QVBoxLayout();
-//    layout->setContentsMargins(10, 10, 10, 10);
-//    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout();
+    layout->setContentsMargins(10, 10, 10, 10);
+    setLayout(layout);
 
-//    addTopWidget();
+    addTopWidget();
 }
 
 void Widget::addTopWidget()
 {
     //创建顶部窗口
-    MyWidget *widget = new MyWidget();
+    QWidget *widget = new QWidget();
     widget->setFixedHeight(100);
     widget->setStyleSheet("background-color: rgb(255,0, 0)");
 
@@ -32,7 +32,9 @@ void Widget::addTopWidget()
     layout->addSpacerItem(item);
 
     //将widget添加到布局
+    QObject *parent = widget->parent();
     layout->addWidget(widget);
+    parent = widget->parent();
 
      //创建并添加widget bottom上面的弹簧
     item = new QSpacerItem(0, 0, QSizePolicy::Preferred, QSizePolicy::Expanding);
