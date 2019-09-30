@@ -11,11 +11,11 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
 //    //添加垂直布局
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->setContentsMargins(10, 10, 10, 10);
-    setLayout(layout);
+//    QVBoxLayout *layout = new QVBoxLayout();
+//    layout->setContentsMargins(10, 10, 10, 10);
+//    setLayout(layout);
 
-    addTopWidget();
+//    addTopWidget();
 }
 
 void Widget::addTopWidget()
