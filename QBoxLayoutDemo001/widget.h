@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QGridLayout>
 
 namespace Ui {
 class Widget;
@@ -16,6 +17,7 @@ public:
     ~Widget();
 
     void addTopWidget();
+    void addBtnIntoScrollAreaWidget(QGridLayout *pLayout);
 
 private:
     Ui::Widget *ui;

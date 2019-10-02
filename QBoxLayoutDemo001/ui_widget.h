@@ -16,6 +16,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -25,14 +26,10 @@ class Ui_Widget
 {
 public:
     QVBoxLayout *verticalLayout;
+    QPushButton *addBtn;
     QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents_2;
-    QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
+    QWidget *scrollAreaWidgetContents;
+    QSpacerItem *verticalSpacer;
 
     void setupUi(QWidget *Widget)
     {
@@ -41,47 +38,35 @@ public:
         Widget->resize(435, 250);
         Widget->setStyleSheet(QStringLiteral("background-color: rgb(85, 255, 255);"));
         verticalLayout = new QVBoxLayout(Widget);
-        verticalLayout->setSpacing(6);
+        verticalLayout->setSpacing(0);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        addBtn = new QPushButton(Widget);
+        addBtn->setObjectName(QStringLiteral("addBtn"));
+
+        verticalLayout->addWidget(addBtn);
+
         scrollArea = new QScrollArea(Widget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(100);
+        sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
+        scrollArea->setSizePolicy(sizePolicy);
+        scrollArea->setMinimumSize(QSize(0, 100));
+        scrollArea->setMaximumSize(QSize(16777215, 100));
         scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents_2 = new QWidget();
-        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 421, 236));
-        verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents_2);
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        pushButton = new QPushButton(scrollAreaWidgetContents_2);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-
-        verticalLayout_2->addWidget(pushButton);
-
-        pushButton_2 = new QPushButton(scrollAreaWidgetContents_2);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-
-        verticalLayout_2->addWidget(pushButton_2);
-
-        pushButton_3 = new QPushButton(scrollAreaWidgetContents_2);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-
-        verticalLayout_2->addWidget(pushButton_3);
-
-        pushButton_4 = new QPushButton(scrollAreaWidgetContents_2);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-
-        verticalLayout_2->addWidget(pushButton_4);
-
-        pushButton_5 = new QPushButton(scrollAreaWidgetContents_2);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-
-        verticalLayout_2->addWidget(pushButton_5);
-
-        scrollArea->setWidget(scrollAreaWidgetContents_2);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 433, 98));
+        scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout->addWidget(scrollArea);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
 
 
         retranslateUi(Widget);
@@ -92,11 +77,7 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("Widget", "PushButton", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("Widget", "PushButton", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("Widget", "PushButton", Q_NULLPTR));
-        pushButton_4->setText(QApplication::translate("Widget", "PushButton", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("Widget", "PushButton", Q_NULLPTR));
+        addBtn->setText(QApplication::translate("Widget", "\346\267\273\345\212\240", Q_NULLPTR));
     } // retranslateUi
 
 };
