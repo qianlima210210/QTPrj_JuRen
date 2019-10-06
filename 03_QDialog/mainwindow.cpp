@@ -26,10 +26,10 @@ MainWindow::MainWindow(QWidget *parent) :
 //        dialog->show();
 
         //消息对话框
-//        QMessageBox::StandardButton btn = QMessageBox::information(this,"title","text",(QMessageBox::Yes|QMessageBox::Abort|QMessageBox::Save),QMessageBox::Abort);
-//        if(btn == QMessageBox::Abort){
-//            qDebug() << "Abort";
-//        }
+        QMessageBox::StandardButton btn = QMessageBox::information(this,"title","text",(QMessageBox::Yes|QMessageBox::Abort|QMessageBox::Save),QMessageBox::Abort);
+        if(btn == QMessageBox::Abort){
+            qDebug() << "Abort";
+        }
 
 
         //颜色对话框
