@@ -72,6 +72,7 @@ void Widget::init()
     connect(ui->listView, clicked, this, &Widget::showClick);
     //connect(ui->listView,SIGNAL(clicked(QModelIndex)),this,SLOT(showClick(QModelIndex)));
     connect(ui->addRow, &QPushButton::clicked, this, [=](){
+
         QStandardItem *item = new QStandardItem(QString("item%1").arg(itemModel->rowCount()));
         QStandardItemModel *model = dynamic_cast<QStandardItemModel*>(ui->listView->model());
         if(itemModel->rowCount() % 2 == 0){
@@ -108,7 +109,7 @@ void Widget::init()
 
         QString str=listmodel->data(index,Qt::DisplayRole).toString();//get data
         bool ok;
-        QString text = QInputDialog::getText(this, tr("edit item"), tr("please edit item"), QLineEdit::Normal,
+        QString text = QInputDialog::getText(this, QStringLiteral("标题"), QStringLiteral("提示信息"), QLineEdit::Normal,
         str, &ok);
         if (ok && !text.isEmpty())
         {
