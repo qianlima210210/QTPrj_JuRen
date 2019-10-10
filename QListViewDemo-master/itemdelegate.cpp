@@ -20,15 +20,13 @@ ItemDelegate::~ItemDelegate()
 
 void ItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-
-
     if(index.isValid())
     {
         painter->save();
 
-        ItemStatus status = (ItemStatus)(index.data(Qt::UserRole).toInt());
+        ItemStatus status = (ItemStatus)(index.data(Qt::UserRole).toInt());//获取单一数据（一般是基本数据类型）
 
-        QVariant variant = index.data(Qt::UserRole+1);
+        QVariant variant = index.data(Qt::UserRole+1);//获取结构体数据
         ItemData data = variant.value<ItemData>();
 
         QStyleOptionViewItem viewOption(option);//用来在视图中画一个item
@@ -54,8 +52,8 @@ void ItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
 
         if(option.state.testFlag(QStyle::State_Selected))
         {
-            painter->setPen(QPen(Qt::blue));
-            painter->setBrush(QColor(229, 241, 255));
+            painter->setPen(QPen(Qt::blue));//设置画笔，用来画边框
+            painter->setBrush(QColor(229, 241, 255));//设置画刷，用来填充矩形颜色
             painter->drawPath(path);
         }
         else if(option.state.testFlag(QStyle::State_MouseOver))

@@ -39,15 +39,17 @@ public:
             Widget->setObjectName(QStringLiteral("Widget"));
         Widget->resize(400, 300);
         verticalLayout = new QVBoxLayout(Widget);
-        verticalLayout->setSpacing(6);
+        verticalLayout->setSpacing(0);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, -1, -1);
         widget = new QWidget(Widget);
         widget->setObjectName(QStringLiteral("widget"));
         horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, -1, -1);
         delRow = new QPushButton(widget);
         delRow->setObjectName(QStringLiteral("delRow"));
 

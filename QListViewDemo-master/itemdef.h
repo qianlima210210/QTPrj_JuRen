@@ -1,4 +1,4 @@
-#ifndef ITEMDEF_H
+﻿#ifndef ITEMDEF_H
 #define ITEMDEF_H
 
 #include <QMetaType>
