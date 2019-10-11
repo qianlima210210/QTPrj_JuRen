@@ -112,11 +112,11 @@ void GroupTitleWidget::initContentMenu()
     setContextMenuPolicy(Qt::CustomContextMenu);
 
     QAction *addAct = new QAction(this);
-    addAct->setText(QStringLiteral("添加分组"));
+    addAct->setText("添加分组");
     QAction *deleteAction = new QAction(this);
-    deleteAction->setText(QStringLiteral("删除分组"));
+    deleteAction->setText("删除分组");
     QAction *renameAction = new QAction(this);
-    renameAction->setText(QStringLiteral("重命名"));
+    renameAction->setText("重命名");
 
     m_contentMenu->addAction(addAct);
     m_contentMenu->addAction(deleteAction);

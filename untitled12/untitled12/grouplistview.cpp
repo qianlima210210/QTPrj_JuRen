@@ -17,7 +17,10 @@ GroupListView::GroupListView(QWidget *parent) :
     m_deleteAction(new QAction(this))
 
 {
-    this->setStyleSheet("QListView{border:none;background-color:rgb(251,250,246);}");
+    QPalette pal;
+    pal.setColor(QPalette::Background, QColor(251,250,246));
+    this->setAutoFillBackground(true);
+    this->setPalette(pal);
 
     this->setItemDelegate(m_delegate);
     this->setModel(m_model);
@@ -27,8 +30,8 @@ GroupListView::GroupListView(QWidget *parent) :
     this->setVisible(false);
     this->setUpdatesEnabled(true);
 
-    m_moveMenu->setTitle("移动联系人至");
-    m_deleteAction->setText("删除联系人");
+    m_moveMenu->setTitle(QStringLiteral("移动联系人至"));
+    m_deleteAction->setText(QStringLiteral("删除联系人"));
 
     m_contentMenu->addMenu(m_moveMenu);
     m_contentMenu->addAction(m_deleteAction);

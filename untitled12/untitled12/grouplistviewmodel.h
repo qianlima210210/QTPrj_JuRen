@@ -1,4 +1,4 @@
-#ifndef GROUPLISTVIEWMODEL_H
+﻿#ifndef GROUPLISTVIEWMODEL_H
 #define GROUPLISTVIEWMODEL_H
 
 #include "people.h"
@@ -16,6 +16,7 @@ public:
     GroupListViewModel(const QList<People> &peoples, QAbstractListModel *parent = 0);
     GroupListViewModel(QAbstractListModel *parent = 0);
 
+    //必须重写的方法
     int rowCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
 

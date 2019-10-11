@@ -1,4 +1,4 @@
-#include "grouplistviewdelegate.h"
+﻿#include "grouplistviewdelegate.h"
 #include <QFontMetrics>
 #include <QPainter>
 #include <QStyleOptionViewItem>

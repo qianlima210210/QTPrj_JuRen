@@ -1,4 +1,4 @@
-﻿
+
 #include <QApplication>
 #include "groupwidget.h"
 

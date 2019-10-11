@@ -16,13 +16,14 @@ GroupWidget::GroupWidget(QWidget *parent) : QWidget(parent)
     this->setLayout(layout);
     layout->setContentsMargins(0,0,0,0);
 
-    m_widget->setStyleSheet("background-color: rgb(170, 170, 255);");
-
     QScrollArea *area = new QScrollArea(this);
-    area->setStyleSheet("background-color: rgb(170, 255, 255);");
-    area->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);//设置垂直滚动条显示时机
+    QPalette pal;
+    pal.setColor(QPalette::Background, QColor(170, 255, 255));
     area->setAutoFillBackground(true);
-    area->setWidgetResizable(true);//自动改变widget大小，以便widget大小超过自身时，滚动条显示出来
+    area->setPalette(pal);
+
+    area->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    area->setWidgetResizable(true);
     area->setWidget(m_widget);
     layout->addWidget(area);
 
