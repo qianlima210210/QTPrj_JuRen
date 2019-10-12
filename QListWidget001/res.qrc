@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/chooseCoin.png</file>
+        <file>img/default_head.png</file>
+        <file>img/shanchu@3x.png</file>
+        <file>img/start.png</file>
+    </qresource>
+</RCC>
