@@ -1,0 +1,111 @@
+﻿import QtQuick 2.6
+import QtQuick.Window 2.2
+import QtQuick.Controls 2.1
+
+
+Window {
+    visible: true
+    width: 640
+    height: 480
+    title: qsTr("键盘事件处理")
+
+    Rectangle {
+        anchors.fill: parent;
+        color: "gray";
+
+        focus: true;
+        Keys.enabled: true;
+        Keys.onEscapePressed: {
+            Qt.quit()
+        }
+        Keys.forwardTo: [moveText, likeQt];
+
+        Text {
+                id: moveText;
+                x: 20;
+                y: 20;
+                width: 200;
+                height: 30;
+                text: "Moving Text";
+                color: "blue";
+                focus: true;
+                font { bold: true; pixelSize: 24;}
+                Keys.enabled: true;
+                Keys.onPressed: {
+                    switch(event.key){
+                    case Qt.Key_Left:
+                        x -= 10;
+                        break;
+                    case Qt.Key_Right:
+                        x += 10;
+                        break;
+                    case Qt.Key_Down:
+                        y += 10;
+                        break;
+                    case Qt.Key_Up:
+                        y -= 10;
+                        break;
+                    default:
+                        return;
+                    }
+                    event.accepted = true;
+                }
+            }
+
+            CheckBox {
+                id: likeQt;
+                text: "Like Qt Quick";
+                anchors.left: parent.left;
+                anchors.leftMargin: 10;
+                anchors.bottom: parent.bottom;
+                anchors.bottomMargin: 10;
+                z: 1;
+                Keys.onPressed: {
+
+                }
+            }
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
