@@ -11,6 +11,7 @@ ColorMaker::ColorMaker(QObject *parent)
 
 ColorMaker::~ColorMaker()
 {
+    super::
 }
 
 QColor ColorMaker::color() const
